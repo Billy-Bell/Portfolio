@@ -1,0 +1,129 @@
+* {
+  text-align: center;
+ 
+}
+
+/******************************************
+Header
+******************************************/
+
+h1 {
+  font-family: 'Lobster', cursive;
+  text-decoration: underline;
+  background: grey;
+  color: white;
+  text-shadow: 2px 2px 1px black;
+  padding: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/******************************************
+Sticky footer
+******************************************/
+
+#content {
+/*  min-height: calc(100vh - 72px);*/
+  height: calc(100vh - 72px);
+/*  max-height: 100vh;*/
+    background: black;
+}
+
+footer {
+  
+  background: grey;
+  color: white;
+  text-shadow: 2px 2px 1px black;
+  text-decoration: underline;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  height: 70px;
+  font-family: 'Lobster', cursive;
+  font-size: 1.23em;
+/*  margin-top: 10px;*/
+/*  display: none;*/
+}
+
+/******************************************
+Slider image formats
+******************************************/
+
+#slider {
+/*    height: 200px;*/
+}
+
+img {
+  max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .7s opacity ease-in;
+  border-radius: 20px;
+/*  display: none;*/
+/*    transform: translateX(-100%);*/
+  opacity: 0;
+}
+
+.show {
+/*  transform: translateX(0);*/
+    opacity: 1;
+}
+
+/*
+.right {
+  transform: translateX(100%);
+
+}
+*/
+
+/******************************************
+Image arrows
+******************************************/
+
+#slider a {
+    background: transparent;
+    height: 100%;
+    position: absolute;
+    padding: 0 3rem;
+/*    padding-top: 45%;*/
+    
+/*    display: hidden;*/
+    z-index: 50;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+#slider a p {
+    position: relative;
+    top: 50%;
+    color: rgba(255,255,255,.6);
+}
+
+
+
+
+.photoBackward {
+    left: 0;
+    border-radius: 20px 0 0 20px;
+}
+
+.photoForward {
+    right: 0;
+    border-radius: 0 20px 20px 0;
+}
+
+@media (min-width:480px) {
+    #slider a:hover p {
+    color: rgba(255,255,255,1);
+}
+
+/*
+#slider a:hover {
+    background: rgba(255,255,255,.3);
+    }
+*/
+}
